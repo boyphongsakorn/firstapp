@@ -48,4 +48,5 @@ USER www
 #EXPOSE 9000
 #CMD ["php-fpm"]
 #CMD ["php", "artisan", "key:generate"]
-CMD ["composer", "install", "&&", "php", "artisan", "serve", "--host", "0.0.0.0"]
+#CMD ["composer", "install", "&&", "php", "artisan", "serve", "--host", "0.0.0.0"]
+CMD bash -c "composer install && php artisan serve --host 0.0.0.0"
